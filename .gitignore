@@ -1,0 +1,7 @@
+data/
+docs/实测/
+shots/
+dist/
+node_modules/
+.env
+*.log

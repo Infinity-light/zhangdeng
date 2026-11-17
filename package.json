@@ -1,0 +1,14 @@
+{
+  "name": "zhangdeng",
+  "version": "1.0.0",
+  "description": "掌灯人 · 调查恐怖题材动态跑团引擎（零依赖）",
+  "type": "module",
+  "private": true,
+  "engines": { "node": ">=20" },
+  "scripts": {
+    "start": "node server.mjs",
+    "test": "node --test tests/unit.test.mjs tests/assist.test.mjs tests/kujing.test.mjs tests/desk.test.mjs",
+    "soak": "node tests/soak.mjs"
+  },
+  "license": "MIT"
+}

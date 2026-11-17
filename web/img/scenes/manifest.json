@@ -1,0 +1,38 @@
+{
+ "雾港来信": {
+  "码头": "wugang-dock.webp",
+  "潮音旅馆": "wugang-inn.webp",
+  "灯塔": "wugang-lighthouse.webp",
+  "潮声牌馆": "wugang-casino.webp",
+  "_file": "雾港来信.md",
+  "_line": "「雾港有东西要给你们看，速来。」",
+  "_hook": "三个外乡人揣着同一封信下了船。写信的人，三个星期前就不见了。",
+  "_cover": "wugang-dock.webp",
+  "_night": [
+   "16:00",
+   "24:40"
+  ],
+  "_endings": {
+   "熄钟": "end-wugang-silence.webp",
+   "回信": "end-wugang-reply.webp",
+   "守夜": "end-wugang-vigil.webp"
+  }
+ },
+ "枯井": {
+  "祠堂": "kujing-hall.webp",
+  "晒谷场": "kujing-yard.webp",
+  "后山枯井": "kujing-well.webp",
+  "_file": "枯井.md",
+  "_hook": "山里的村子三个月没下雨。井干了以后，孩子开始一个一个不见。",
+  "_cover": "kujing-well.webp",
+  "_endings": {
+   "封井": "end-kujing-seal.webp",
+   "井水又满了": "end-kujing-full.webp"
+  },
+  "_night": [
+   "18:00",
+   "24:00"
+  ],
+  "_line": "「柳溪村一月之内走失三童，县里无人肯往。」"
+ }
+}

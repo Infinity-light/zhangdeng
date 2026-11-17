@@ -1,0 +1,92 @@
+{
+  "id": "chaohen-v1",
+  "name": "潮痕规则 v1",
+  "note": "原创规则包。机制为百分骰调查恐怖类通用机制，名称、数值与各表均为本项目自编，未摘录任何商业规则书。可整体替换为你有权使用的规则数据。",
+  "terms": { "keeper": "掌灯人", "pc": "寻访者", "hp": "体魄", "mind": "定力", "bonus": "顺势骰", "penalty": "逆势骰", "push": "孤注一掷", "disorder": "失序" },
+  "attributes": [
+    { "id": "str", "name": "力量", "aliases": ["STR"] }, { "id": "con", "name": "体质", "aliases": ["CON"] }, { "id": "dex", "name": "敏捷", "aliases": ["DEX"] },
+    { "id": "int", "name": "智识", "aliases": ["INT", "智力"] }, { "id": "wil", "name": "意志", "aliases": ["POW"] }, { "id": "cha", "name": "风度", "aliases": ["APP", "外貌"] }
+  ],
+  "derived": {
+    "hp_max": "round(con/6 + str/12)",
+    "mind_start": "round((wil*2 + int)/3)"
+  },
+  "check": {
+    "tiers": { "regular": { "name": "普通", "factor": 1 }, "hard": { "name": "困难", "factor": 0.5 }, "extreme": { "name": "极难", "factor": 0.2 } },
+    "crit_max": 2,
+    "fumble_min": 99,
+    "fumble_min_when_target_below": { "target": 40, "min": 96 },
+    "levels": { "crit": "大成功", "extreme": "极难成功", "hard": "困难成功", "regular": "成功", "fail": "失败", "fumble": "大失败" }
+  },
+  "mind": {
+    "bout_threshold": 5,
+    "long_fraction": 0.2,
+    "bout_duration": "1d10",
+    "note": "单次损失达到 bout_threshold 且智识检定成功（看懂了）→ 短时失序；单日累计损失达到日初定力的 long_fraction → 长时失序；定力归零 → 永久失序，角色交给掌灯人。"
+  },
+  "combat": {
+    "initiative_attr": "dex",
+    "major_wound_fraction": 0.5,
+    "damage_bonus": [ { "str_max": 30, "bonus": "-1" }, { "str_max": 60, "bonus": "0" }, { "str_max": 80, "bonus": "1d3" }, { "str_max": 999, "bonus": "1d5" } ]
+  },
+  "growth": { "gain": "1d8", "note": "团后对勾选过的技能逐个掷 d100，高于当前值则成长。" },
+  "skills": [
+    { "id": "spot", "name": "察觉", "base": 25, "aliases": ["侦查", "侦察"], "keywords": ["察觉", "观察", "侦查", "看", "留意"] },
+    { "id": "listen", "name": "聆听", "base": 20, "aliases": [], "keywords": ["聆听", "听"] },
+    { "id": "research", "name": "查阅", "base": 20, "aliases": ["图书馆使用", "图书馆"], "keywords": ["查阅", "翻阅", "图书", "档案"] },
+    { "id": "talk", "name": "话术", "base": 15, "aliases": ["说服", "快速交谈", "魅惑"], "keywords": ["话术", "说服", "劝", "套话"] },
+    { "id": "intimidate", "name": "威吓", "base": 15, "aliases": ["恐吓"], "keywords": ["威吓", "恐吓", "威胁"] },
+    { "id": "insight", "name": "识人", "base": 10, "aliases": ["心理学"], "keywords": ["识人", "心理", "揣摩"] },
+    { "id": "stealth", "name": "潜行", "base": 20, "aliases": ["躲藏"], "keywords": ["潜行", "偷偷", "悄悄", "溜"] },
+    { "id": "lockwork", "name": "机巧", "base": 5, "aliases": ["锁匠", "开锁"], "keywords": ["机巧", "撬锁", "开锁"] },
+    { "id": "medicine", "name": "救护", "base": 30, "aliases": ["急救", "医学"], "keywords": ["救护", "急救", "包扎"] },
+    { "id": "lore", "name": "旧闻", "base": 5, "aliases": ["历史"], "keywords": ["旧闻", "掌故", "传说"] },
+    { "id": "occult", "name": "异闻学", "base": 5, "aliases": ["神秘学"], "keywords": ["异闻", "神秘学"] },
+    { "id": "seacraft", "name": "行船", "base": 5, "aliases": ["船驾驶", "游泳", "导航"], "keywords": ["行船", "驾船", "水性", "游泳"] },
+    { "id": "brawl", "name": "搏击", "base": 25, "aliases": ["斗殴", "格斗"], "keywords": ["搏击", "打", "揍", "踢"] },
+    { "id": "firearm", "name": "射击", "base": 20, "aliases": ["手枪", "步枪"], "keywords": ["射击", "开枪"] },
+    { "id": "dodge", "name": "闪避", "base": 20, "aliases": [], "keywords": ["闪避", "躲"] },
+    { "id": "climb", "name": "攀爬", "base": 20, "aliases": ["跳跃"], "keywords": ["攀爬", "爬"] }
+  ],
+  "weapons": [
+    { "id": "fist", "name": "拳脚", "skill": "brawl", "damage": "1d3", "range": "贴身" },
+    { "id": "gaff", "name": "鱼钩篙", "skill": "brawl", "damage": "1d6+1", "range": "贴身" },
+    { "id": "knife", "name": "剖鱼刀", "skill": "brawl", "damage": "1d4+1", "range": "贴身" },
+    { "id": "oar", "name": "断桨", "skill": "brawl", "damage": "1d6", "range": "贴身" },
+    { "id": "revolver", "name": "旧式转轮", "skill": "firearm", "damage": "1d8+1", "range": "十五步", "ammo": 6 },
+    { "id": "flare", "name": "信号枪", "skill": "firearm", "damage": "1d6", "range": "十步", "ammo": 1, "note": "命中后目标着火，每轮 1d3" },
+    { "id": "shotgun", "name": "双管猎枪", "skill": "firearm", "damage": "2d6+2", "range": "十步", "ammo": 2 }
+  ],
+  "rites": [
+    { "id": "salt_line", "name": "撒盐为界", "cost_mind": 1, "effect": "一条盐线，水里来的东西在一个潮次内不越线。需要一把粗盐和一句完整的潮汐时刻。" },
+    { "id": "name_back", "name": "唤回本名", "cost_mind": "1d4", "effect": "对正在被呼唤的人念出其本名三次，使其本轮不受声音牵引。" },
+    { "id": "still_bell", "name": "止钟", "cost_mind": "1d6", "effect": "以手按住正在自鸣的钟，使其在施术者松手前不再发声。施术者每轮进行一次定力检定。" }
+  ],
+  "relics": [
+    { "id": "whale_oil", "name": "陈年鲸油", "effect": "点燃后的光在雾里不散。水里来的东西不愿靠近这种光。" },
+    { "id": "green_coin", "name": "发绿的金币", "effect": "不属于任何朝代的金币。持有者当夜的梦里有潮声；次日首次定力检定加一枚逆势骰。" },
+    { "id": "tide_table", "name": "手抄潮汐表", "effect": "记有不在任何官方表上的潮次。行船检定加一枚顺势骰。" }
+  ],
+  "disorder_short": [
+    "失语：喉咙里只剩气音，说不出一个完整的词。",
+    "数潮：必须一遍遍数浪头，被打断就从头再数。",
+    "畏水：不肯靠近任何能照出人影的水面，包括一碗茶。",
+    "僵立：站在原地，眼睛跟着并不存在的光转。",
+    "认错人：把身边一位同伴当成一个早已不在的人，并坚持如此称呼。",
+    "洗手：反复搓洗双手，觉得指缝间有什么在长。",
+    "奔逃：朝离水最远的方向跑，直到跑不动。",
+    "低语：不由自主地重复刚才听到的最后一句话。",
+    "拆信：把手边所有带字的纸撕碎，说上面的字在动。",
+    "应声：有人叫名字就答应，哪怕声音是从海那边来的。"
+  ],
+  "disorder_long": [
+    "潮时癖：每到涨潮必须在场看着，否则坐立不安。",
+    "讳名：再也不肯说出某个人的名字，也不许别人说。",
+    "夜不闭灯：睡觉时必须有一盏不灭的灯。",
+    "咸味幻觉：所有食物尝起来都是海水。",
+    "写信强迫：每晚写一封不寄的信，内容自己事后看不懂。",
+    "畏镜：觉得镜子里的自己眨眼慢了半拍。",
+    "听钟：安静下来就听见很远的钟声，别人听不见。",
+    "数指：隔一会儿就要数一遍自己的手指。"
+  ]
+}

@@ -1,0 +1,469 @@
+{
+ "round": 26,
+ "clock": 1257,
+ "scene": "well",
+ "phase": "wrap",
+ "pcs": {
+  "fang": {
+   "id": "fang",
+   "name": "方既白",
+   "role": "县报馆外勤记者",
+   "seat": "human",
+   "attrs": {
+    "str": 50,
+    "con": 55,
+    "siz": 60,
+    "dex": 60,
+    "app": 55,
+    "int": 70,
+    "pow": 55,
+    "edu": 70
+   },
+   "skills": {
+    "spot": 60,
+    "listen": 40,
+    "research": 55,
+    "persuade": 50,
+    "talk": 5,
+    "charm": 15,
+    "intimidate": 15,
+    "insight": 45,
+    "stealth": 20,
+    "lockwork": 1,
+    "sleight": 35,
+    "medicine": 30,
+    "doctor": 1,
+    "lore": 5,
+    "occult": 5,
+    "mythos": 0,
+    "nature": 10,
+    "navigate": 10,
+    "track": 10,
+    "disguise": 5,
+    "mech": 10,
+    "elec": 10,
+    "drive": 20,
+    "seacraft": 1,
+    "swim": 20,
+    "climb": 20,
+    "jump": 20,
+    "throw": 20,
+    "brawl": 25,
+    "firearm": 20,
+    "dodge": 30,
+    "credit": 0
+   },
+   "hp": 11,
+   "hpMax": 11,
+   "mind": 53,
+   "mindMax": 55,
+   "mindDayStart": 55,
+   "mindDayLost": 2,
+   "items": [
+    "采访本",
+    "自来水笔",
+    "介绍信",
+    "手电",
+    "镇井文"
+   ],
+   "conditions": [],
+   "ticked": [
+    "research"
+   ],
+   "status": "ok",
+   "background": "跑了六年社会新闻，写过的失踪案没有一桩有下文。这一次他想写一桩有下文的。",
+   "drive": "把事情登出来。登出来才算数。",
+   "fear": "没有人相信的真话",
+   "relations": "贺兰亭是报馆请来的随行医生，他信她的手，不太信她的胆子。"
+  },
+  "he": {
+   "id": "he",
+   "name": "贺兰亭",
+   "role": "教会诊所的助产士",
+   "seat": "human",
+   "attrs": {
+    "str": 45,
+    "con": 60,
+    "siz": 50,
+    "dex": 55,
+    "app": 60,
+    "int": 65,
+    "pow": 70,
+    "edu": 65
+   },
+   "skills": {
+    "spot": 25,
+    "listen": 50,
+    "research": 20,
+    "persuade": 35,
+    "talk": 5,
+    "charm": 15,
+    "intimidate": 15,
+    "insight": 50,
+    "stealth": 20,
+    "lockwork": 1,
+    "sleight": 10,
+    "medicine": 65,
+    "doctor": 45,
+    "lore": 5,
+    "occult": 25,
+    "mythos": 0,
+    "nature": 40,
+    "navigate": 10,
+    "track": 10,
+    "disguise": 5,
+    "mech": 10,
+    "elec": 10,
+    "drive": 20,
+    "seacraft": 1,
+    "swim": 20,
+    "climb": 20,
+    "jump": 20,
+    "throw": 20,
+    "brawl": 25,
+    "firearm": 20,
+    "dodge": 25,
+    "credit": 0
+   },
+   "hp": 11,
+   "hpMax": 11,
+   "mind": 70,
+   "mindMax": 70,
+   "mindDayStart": 70,
+   "mindDayLost": 0,
+   "items": [
+    "药箱",
+    "煤油灯",
+    "洋火"
+   ],
+   "conditions": [],
+   "ticked": [
+    "occult"
+   ],
+   "status": "ok",
+   "background": "接生过两百多个孩子，记得每一个的哭声。报馆托她来，是因为村里人或许肯同一个女人说话。",
+   "drive": "孩子的事不能算了。",
+   "fear": "孩子的哭声忽然停下",
+   "relations": "觉得方既白只想要稿子；对小石照看得多一些。"
+  },
+  "shi": {
+   "id": "shi",
+   "name": "石小满",
+   "role": "报馆学徒",
+   "seat": "ai",
+   "attrs": {
+    "str": 40,
+    "con": 50,
+    "siz": 45,
+    "dex": 65,
+    "app": 50,
+    "int": 55,
+    "pow": 40,
+    "edu": 45
+   },
+   "skills": {
+    "spot": 40,
+    "listen": 45,
+    "research": 20,
+    "persuade": 10,
+    "talk": 5,
+    "charm": 15,
+    "intimidate": 15,
+    "insight": 10,
+    "stealth": 45,
+    "lockwork": 1,
+    "sleight": 10,
+    "medicine": 30,
+    "doctor": 1,
+    "lore": 5,
+    "occult": 5,
+    "mythos": 0,
+    "nature": 10,
+    "navigate": 10,
+    "track": 10,
+    "disguise": 5,
+    "mech": 10,
+    "elec": 10,
+    "drive": 20,
+    "seacraft": 1,
+    "swim": 20,
+    "climb": 50,
+    "jump": 20,
+    "throw": 40,
+    "brawl": 25,
+    "firearm": 20,
+    "dodge": 40,
+    "credit": 0
+   },
+   "hp": 9,
+   "hpMax": 9,
+   "mind": 40,
+   "mindMax": 40,
+   "mindDayStart": 40,
+   "mindDayLost": 0,
+   "items": [
+    "行李",
+    "麻绳",
+    "干粮"
+   ],
+   "conditions": [],
+   "ticked": [],
+   "status": "ok",
+   "background": "十六岁，山里出来的孩子，认得山路，替两位先生背行李。他小时候村里也有一口不许靠近的井。",
+   "drive": "别被先生们赶回去。",
+   "fear": "井",
+   "relations": "怕方先生，亲近贺先生。"
+  }
+ },
+ "npcs": {
+  "liu": {
+   "at": "hall",
+   "attitude": -1,
+   "mood": "疲惫",
+   "met": true,
+   "said": [
+    "liu_k1",
+    "liu_k2"
+   ],
+   "memory": [
+    "18:12 贺兰亭同你说过话",
+    "18:36 方既白看过族谱",
+    "18:54 贺兰亭同你说过话",
+    "19:00 方既白同你说过话",
+    "19:00 贺兰亭动过牌位",
+    "20:30 方既白同你说过话",
+    "20:36 贺兰亭同你说过话",
+    "20:42 贺兰亭同你说过话"
+   ],
+   "smalltalk_i": 0,
+   "deflect_i": 2
+  },
+  "qin": {
+   "at": "yard",
+   "attitude": 1,
+   "mood": "焦躁",
+   "met": true,
+   "said": [
+    "qin_k1"
+   ],
+   "memory": [
+    "19:27 方既白同你说过话",
+    "19:33 贺兰亭同你说过话"
+   ],
+   "smalltalk_i": 0,
+   "deflect_i": 0
+  },
+  "sui": {
+   "at": "yard",
+   "attitude": 1,
+   "mood": "绷着",
+   "met": true,
+   "said": [
+    "sui_k1"
+   ],
+   "memory": [
+    "19:27 方既白同你说过话",
+    "19:33 贺兰亭同你说过话"
+   ],
+   "smalltalk_i": 0,
+   "deflect_i": 0
+  },
+  "shen": {
+   "at": "hall",
+   "attitude": 0,
+   "mood": "木然",
+   "met": true,
+   "said": [
+    "shen_k2"
+   ],
+   "memory": [
+    "18:12 贺兰亭同你说过话",
+    "18:36 方既白看过族谱",
+    "18:54 贺兰亭同你说过话",
+    "19:00 方既白同你说过话",
+    "19:00 贺兰亭动过牌位",
+    "20:30 方既白同你说过话",
+    "20:36 贺兰亭同你说过话",
+    "20:42 贺兰亭同你说过话"
+   ],
+   "smalltalk_i": 0,
+   "deflect_i": 1
+  }
+ },
+ "clues": {
+  "C1": {
+   "found": true,
+   "round": 5,
+   "carrier": "C1c",
+   "by": "director",
+   "knownBy": [
+    "fang",
+    "he",
+    "shi"
+   ],
+   "carriersUsed": [
+    "C1c"
+   ]
+  },
+  "C2": {
+   "found": true,
+   "round": 12,
+   "carrier": "C2a",
+   "by": "qin",
+   "knownBy": [
+    "fang",
+    "he",
+    "shi"
+   ],
+   "carriersUsed": [
+    "C2a"
+   ]
+  },
+  "C3": {
+   "found": true,
+   "round": 13,
+   "carrier": "C3a",
+   "by": "sui",
+   "knownBy": [
+    "fang",
+    "he",
+    "shi"
+   ],
+   "carriersUsed": [
+    "C3a"
+   ]
+  },
+  "C4": {
+   "found": true,
+   "round": 18,
+   "carrier": "C4a",
+   "by": "fang",
+   "knownBy": [
+    "fang"
+   ],
+   "carriersUsed": [
+    "C4a"
+   ]
+  },
+  "C5": {
+   "found": true,
+   "round": 21,
+   "carrier": "C5a",
+   "by": "liu",
+   "knownBy": [
+    "fang",
+    "he",
+    "shi"
+   ],
+   "carriersUsed": [
+    "C5a"
+   ]
+  }
+ },
+ "flags": {
+  "saw_jars": 1,
+  "__press": 7,
+  "dusk": 1,
+  "read_paper": 1,
+  "__lead": 23,
+  "saw_well": 1,
+  "__floor": "reveal",
+  "__floor_why": "寻访者已见到「井口」，进入揭示",
+  "__avail_K_seal": 24,
+  "__chose_K_seal": 25,
+  "well_sealed": 1
+ },
+ "facts": [
+  {
+   "id": "F1",
+   "text": "祠堂，方既白：坐在门槛上抽一袋烟",
+   "round": 3,
+   "scene": "hall",
+   "source": "player-improv"
+  },
+  {
+   "id": "F2",
+   "text": "祠堂，贺兰亭：蹲下来系鞋带",
+   "round": 4,
+   "scene": "hall",
+   "source": "player-improv"
+  },
+  {
+   "id": "F3",
+   "text": "祠堂，方既白：盯着自己的影子发呆",
+   "round": 5,
+   "scene": "hall",
+   "source": "player-improv"
+  },
+  {
+   "id": "F4",
+   "text": "祠堂，贺兰亭：哼一支小调",
+   "round": 6,
+   "scene": "hall",
+   "source": "player-improv"
+  },
+  {
+   "id": "F5",
+   "text": "后山枯井，贺兰亭：对着井口喊：你是谁，你想要什么，我们可以谈",
+   "round": 19,
+   "scene": "well",
+   "source": "player-improv"
+  }
+ ],
+ "visited": {
+  "hall": 2,
+  "yard": 1,
+  "well": 2
+ },
+ "examined": {
+  "hall.jars": "done",
+  "hall.genealogy": "done",
+  "hall.tablets": "failed",
+  "well.paper": "done",
+  "well.mouth": "done"
+ },
+ "beatsUsed": {
+  "hall": [
+   "香灰落下来一截，没有声音。",
+   "香烧到一半齐齐灭了。三根一起。"
+  ],
+  "yard": [
+   "牛甩了一下尾巴，没有苍蝇。",
+   "牛忽然往后退了两步，缰绳绷直了。",
+   "货担上的拨浪鼓被风带着转了半圈，没响。"
+  ],
+  "well": [
+   "磨盘自己挪了一指宽。",
+   "缝里有气往外出，是凉的，带着孩子嘴里才有的那种甜味。"
+  ]
+ },
+ "firedTriggers": [
+  "T_dusk"
+ ],
+ "offTrack": 0,
+ "stall": 2,
+ "lastClueRound": 21,
+ "pendingPush": null,
+ "ending": {
+  "id": "E_seal",
+  "round": 25
+ },
+ "safety": {
+  "fadeUntil": 0,
+  "level": "full"
+ },
+ "speech": {
+  "human": 26,
+  "ai": 12
+ },
+ "rng": {
+  "seed": 1404789402,
+  "state": 3740308491,
+  "draws": 13
+ },
+ "flavor": {
+  "seed": 2277741551,
+  "state": 2589871236,
+  "draws": 33
+ }
+}

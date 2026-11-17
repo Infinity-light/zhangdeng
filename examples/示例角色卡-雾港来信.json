@@ -1,0 +1,161 @@
+{
+ "lu": {
+  "id": "lu",
+  "name": "陆衡",
+  "role": "退役船医",
+  "seat": "human",
+  "attrs": {
+   "str": 55,
+   "con": 60,
+   "dex": 50,
+   "int": 65,
+   "wil": 60,
+   "cha": 45
+  },
+  "skills": {
+   "spot": 50,
+   "listen": 35,
+   "research": 20,
+   "talk": 15,
+   "intimidate": 15,
+   "insight": 40,
+   "stealth": 20,
+   "lockwork": 5,
+   "medicine": 65,
+   "lore": 5,
+   "occult": 5,
+   "seacraft": 45,
+   "brawl": 40,
+   "firearm": 20,
+   "dodge": 30,
+   "climb": 20
+  },
+  "hp": 15,
+  "hpMax": 15,
+  "mind": 56,
+  "mindMax": 62,
+  "mindDayStart": 62,
+  "mindDayLost": 6,
+  "items": [
+   "急救包",
+   "怀表",
+   "沈砚秋的信",
+   "陈年鲸油"
+  ],
+  "conditions": [],
+  "ticked": [
+   "brawl"
+  ],
+  "status": "ok",
+  "background": "在远洋货轮上做过八年船医。沈砚秋是他同舱三年的测量员，欠他一条命。",
+  "drive": "欠的命要还。活要见人。",
+  "fear": "溺水者的手",
+  "relations": "与苏幼宁是经沈砚秋认识的，彼此客气；觉得温知夏太年轻。"
+ },
+ "su": {
+  "id": "su",
+  "name": "苏幼宁",
+  "role": "省立档案馆抄录员",
+  "seat": "human",
+  "attrs": {
+   "str": 35,
+   "con": 45,
+   "dex": 55,
+   "int": 75,
+   "wil": 55,
+   "cha": 55
+  },
+  "skills": {
+   "spot": 45,
+   "listen": 20,
+   "research": 70,
+   "talk": 45,
+   "intimidate": 15,
+   "insight": 10,
+   "stealth": 40,
+   "lockwork": 25,
+   "medicine": 30,
+   "lore": 50,
+   "occult": 25,
+   "seacraft": 5,
+   "brawl": 25,
+   "firearm": 20,
+   "dodge": 20,
+   "climb": 20
+  },
+  "hp": 10,
+  "hpMax": 10,
+  "mind": 61,
+  "mindMax": 62,
+  "mindDayStart": 62,
+  "mindDayLost": 1,
+  "items": [
+   "放大镜",
+   "铅笔与抄录本",
+   "沈砚秋的信",
+   "灯塔钥匙",
+   "207号房钥匙"
+  ],
+  "conditions": [],
+  "ticked": [
+   "spot",
+   "talk",
+   "research"
+  ],
+  "status": "ok",
+  "background": "沈砚秋的表妹，替他抄过三年潮汐档案。她认得他的每一种笔迹。",
+  "drive": "弄明白。哪怕明白了更糟。",
+  "fear": "认得的字迹写出不认得的话",
+  "relations": "信任陆衡的稳当；常拿温知夏当弟妹照看。"
+ },
+ "wen": {
+  "id": "wen",
+  "name": "温知夏",
+  "role": "小报记者（胆小）",
+  "seat": "ai",
+  "attrs": {
+   "str": 40,
+   "con": 45,
+   "dex": 60,
+   "int": 60,
+   "wil": 40,
+   "cha": 60
+  },
+  "skills": {
+   "spot": 40,
+   "listen": 50,
+   "research": 20,
+   "talk": 55,
+   "intimidate": 15,
+   "insight": 35,
+   "stealth": 45,
+   "lockwork": 5,
+   "medicine": 30,
+   "lore": 5,
+   "occult": 5,
+   "seacraft": 5,
+   "brawl": 25,
+   "firearm": 20,
+   "dodge": 35,
+   "climb": 20
+  },
+  "hp": 11,
+  "hpMax": 11,
+  "mind": 46,
+  "mindMax": 47,
+  "mindDayStart": 47,
+  "mindDayLost": 1,
+  "items": [
+   "采访本",
+   "镁光灯相机",
+   "沈砚秋的信"
+  ],
+  "conditions": [],
+  "ticked": [],
+  "status": "ok",
+  "background": "《沪滨晚报》跑社会新闻的记者。沈砚秋是她大学时的学长，这封信是她收到过的唯一一封不为公事的信。",
+  "drive": "想写一篇不是别人口述的稿子。",
+  "fear": "黑水、叫她全名的声音",
+  "relations": "依赖苏幼宁；有点怕陆衡。"
+ }
+}

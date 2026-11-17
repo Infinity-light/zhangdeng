@@ -1,0 +1,117 @@
+{
+  "id": "tongxing-d100",
+  "name": "通行百分骰规则 v1",
+  "note": "与市面上常见的百分骰调查恐怖类模组直接兼容的规则包：属性与技能的设置方式、三档难度、奖励骰/惩罚骰、成功等级、孤注一掷、理智检定的「成功损失/失败损失」记法、临时与长期疯狂、按敏捷排先攻，都按这一类跑团的通行设计来。各表沿用通行的栏目结构，数值按通行量级自定，条目文字（疯狂症状、法术与物品效果）均为本项目自写，没有摘录任何规则书的正文。",
+  "terms": { "keeper": "守秘人", "pc": "调查员", "hp": "生命值", "mind": "理智", "bonus": "奖励骰", "penalty": "惩罚骰", "push": "孤注一掷", "disorder": "疯狂" },
+  "attributes": [
+    { "id": "str", "name": "力量", "aliases": ["STR"] }, { "id": "con", "name": "体质", "aliases": ["CON"] },
+    { "id": "siz", "name": "体型", "aliases": ["SIZ"] }, { "id": "dex", "name": "敏捷", "aliases": ["DEX"] },
+    { "id": "app", "name": "外貌", "aliases": ["APP", "风度"] }, { "id": "int", "name": "智力", "aliases": ["INT", "灵感", "智识"] },
+    { "id": "pow", "name": "意志", "aliases": ["POW"] }, { "id": "edu", "name": "教育", "aliases": ["EDU"] }
+  ],
+  "derived": {
+    "hp_max": "floor((con + siz) / 10)",
+    "mind_start": "pow"
+  },
+  "check": {
+    "tiers": { "regular": { "name": "普通", "factor": 1 }, "hard": { "name": "困难", "factor": 0.5 }, "extreme": { "name": "极难", "factor": 0.2 } },
+    "crit_max": 1,
+    "fumble_min": 100,
+    "fumble_min_when_target_below": { "target": 50, "min": 96 },
+    "levels": { "crit": "大成功", "extreme": "极难成功", "hard": "困难成功", "regular": "成功", "fail": "失败", "fumble": "大失败" }
+  },
+  "mind": {
+    "bout_threshold": 5,
+    "long_fraction": 0.2,
+    "bout_duration": "1d10",
+    "pass": "理智检定成功", "fail": "理智检定失败",
+    "permanent_text": "理智归零。这位调查员从此交给守秘人。",
+    "note": "单次损失达到 5 点且智力检定成功（意识到自己看见了什么）→ 临时疯狂，持续 1d10 轮；一天内累计损失达到当日初始理智的五分之一 → 长期疯狂；理智归零 → 永久疯狂。"
+  },
+  "combat": {
+    "initiative_attr": "dex",
+    "major_wound_fraction": 0.5,
+    "damage_bonus_attrs": ["str", "siz"],
+    "damage_bonus": [ { "max": 64, "bonus": "-2" }, { "max": 84, "bonus": "-1" }, { "max": 124, "bonus": "0" }, { "max": 164, "bonus": "1d4" }, { "max": 999, "bonus": "1d6" } ]
+  },
+  "growth": { "gain": "1d10", "note": "团后对勾选过的技能逐个掷 d100，高于当前技能值则成长 1d10。" },
+  "social_skill": "persuade",
+  "skills": [
+    { "id": "spot", "name": "侦查", "base": 25, "aliases": ["察觉", "侦察", "观察"] },
+    { "id": "listen", "name": "聆听", "base": 20, "aliases": ["听"] },
+    { "id": "research", "name": "图书馆使用", "base": 20, "aliases": ["图书馆", "图书馆利用", "查阅"] },
+    { "id": "persuade", "name": "说服", "base": 10, "aliases": ["劝说"] },
+    { "id": "talk", "name": "话术", "base": 5, "aliases": ["快速交谈"] },
+    { "id": "charm", "name": "魅惑", "base": 15, "aliases": ["取悦"] },
+    { "id": "intimidate", "name": "恐吓", "base": 15, "aliases": ["威吓"] },
+    { "id": "insight", "name": "心理学", "base": 10, "aliases": ["识人"] },
+    { "id": "stealth", "name": "潜行", "base": 20, "aliases": ["躲藏"] },
+    { "id": "lockwork", "name": "锁匠", "base": 1, "aliases": ["开锁", "机巧"] },
+    { "id": "sleight", "name": "妙手", "base": 10, "aliases": ["巧手"] },
+    { "id": "medicine", "name": "急救", "base": 30, "aliases": ["救护"] },
+    { "id": "doctor", "name": "医学", "base": 1, "aliases": [] },
+    { "id": "lore", "name": "历史", "base": 5, "aliases": ["旧闻"] },
+    { "id": "occult", "name": "神秘学", "base": 5, "aliases": ["异闻学"] },
+    { "id": "mythos", "name": "神话知识", "base": 0, "aliases": ["克苏鲁神话", "神话"] },
+    { "id": "nature", "name": "博物学", "base": 10, "aliases": ["自然"] },
+    { "id": "navigate", "name": "导航", "base": 10, "aliases": ["领航"] },
+    { "id": "track", "name": "追踪", "base": 10, "aliases": [] },
+    { "id": "disguise", "name": "乔装", "base": 5, "aliases": [] },
+    { "id": "mech", "name": "机械维修", "base": 10, "aliases": [] },
+    { "id": "elec", "name": "电气维修", "base": 10, "aliases": [] },
+    { "id": "drive", "name": "驾驶", "base": 20, "aliases": ["汽车驾驶"] },
+    { "id": "seacraft", "name": "船驾驶", "base": 1, "aliases": ["行船", "操舟"] },
+    { "id": "swim", "name": "游泳", "base": 20, "aliases": [] },
+    { "id": "climb", "name": "攀爬", "base": 20, "aliases": [] },
+    { "id": "jump", "name": "跳跃", "base": 20, "aliases": [] },
+    { "id": "throw", "name": "投掷", "base": 20, "aliases": [] },
+    { "id": "brawl", "name": "斗殴", "base": 25, "aliases": ["格斗", "搏击", "格斗(斗殴)", "格斗（斗殴）"] },
+    { "id": "firearm", "name": "射击", "base": 20, "aliases": ["手枪", "射击(手枪)", "射击（手枪）", "步枪", "射击(步枪)", "射击（步枪）"] },
+    { "id": "dodge", "name": "闪避", "base": 25, "aliases": [] },
+    { "id": "credit", "name": "信用评级", "base": 0, "aliases": ["信用"] }
+  ],
+  "weapons": [
+    { "id": "fist", "name": "徒手", "skill": "brawl", "damage": "1d3", "range": "接触" },
+    { "id": "knife", "name": "小刀", "skill": "brawl", "damage": "1d4", "range": "接触" },
+    { "id": "club", "name": "棍棒", "skill": "brawl", "damage": "1d6", "range": "接触" },
+    { "id": "hatchet", "name": "手斧", "skill": "brawl", "damage": "1d6+1", "range": "接触" },
+    { "id": "pistol", "name": "小口径手枪", "skill": "firearm", "damage": "1d8", "range": "15 米", "ammo": 6 },
+    { "id": "revolver", "name": "大口径左轮", "skill": "firearm", "damage": "1d10+2", "range": "15 米", "ammo": 6 },
+    { "id": "rifle", "name": "栓动步枪", "skill": "firearm", "damage": "2d6+3", "range": "100 米", "ammo": 5 },
+    { "id": "shotgun", "name": "双管霰弹枪", "skill": "firearm", "damage": "3d6", "range": "10 米", "ammo": 2, "note": "距离每翻一倍伤害减 1d6" }
+  ],
+  "rites": [
+    { "id": "ward_sign", "name": "刻下旧印", "cost_mind": "1d4", "effect": "在门槛或器物上刻一枚印记。来自外面的东西在印记被毁之前不会越过它；刻印者当夜无法安睡。" },
+    { "id": "call_name", "name": "呼其真名", "cost_mind": "1d6", "effect": "念出一个存在的真名，使其在三轮内必须面向呼名者。之后它会记得这个声音。" },
+    { "id": "veil_eyes", "name": "蔽目", "cost_mind": 1, "effect": "一小时内受术者看不见不该看见的东西——理智检定的失败损失减半（向上取整），侦查检定加一枚惩罚骰。" },
+    { "id": "ask_dead", "name": "问尸", "cost_mind": "1d6", "effect": "向一具死去不满七日的遗体问三个问题。它只回答自己生前知道的事，而且不保证说实话。" },
+    { "id": "bind_shadow", "name": "缚影", "cost_mind": "1d3", "effect": "把一个目标的影子钉在原地。目标每轮进行一次力量对抗，失败则无法移动。须有明火。" }
+  ],
+  "relics": [
+    { "id": "old_tome", "name": "残缺的抄本", "effect": "通读需要数周。读完后神话知识 +1d6，理智 −1d6；其中夹着一页不属于这本书的纸。" },
+    { "id": "star_stone", "name": "五角石", "effect": "一块刻着歪斜星形的灰石。握着它进行的理智检定加一枚奖励骰，每日一次。" },
+    { "id": "silver_key", "name": "锈蚀的银钥匙", "effect": "它打不开任何一把现存的锁。持有者偶尔会梦见一扇门。" }
+  ],
+  "disorder_short": [
+    "失忆：回过神来时不记得刚才这几分钟里发生过什么。",
+    "僵直：一动不动地站着，对呼喊和拉扯都没有反应。",
+    "逃离：不顾一切地朝最近的出口跑，直到再也跑不动。",
+    "歇斯底里：止不住地笑、哭或者尖叫。",
+    "认错人：把在场的某个人当成一位已故的亲人，并坚持如此。",
+    "强迫动作：反复做同一个无意义的动作——擦手、数数、整理衣领。",
+    "失语：张着嘴，却发不出一个完整的音节。",
+    "幻视：看见一个别人都看不见的人站在房间角落里。",
+    "攻击冲动：把离自己最近的人或物当成威胁，扑上去。",
+    "自言自语：同一个不在场的人低声交谈，并且似乎得到了回答。"
+  ],
+  "disorder_long": [
+    "恐惧症：对本次遭遇中最鲜明的那样东西（水、黑暗、某种气味）产生无法克制的恐惧。",
+    "执念：必须把今晚见到的一切逐字记下来，记不完不能做别的事。",
+    "失眠：再也不敢合眼，因为一闭眼就回到那个地方。",
+    "被害妄想：坚信同伴里有一个已经被替换了。",
+    "收集癖：把与这件事有关的每一样小东西都带在身上，不许别人碰。",
+    "洁癖：觉得身上沾着洗不掉的东西。",
+    "幻听：安静时总听见有人叫自己的名字。",
+    "回避：拒绝再提起某个人或某个地点的名字。"
+  ]
+}

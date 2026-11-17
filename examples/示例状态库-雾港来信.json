@@ -1,0 +1,512 @@
+{
+ "round": 54,
+ "clock": 1446,
+ "scene": "lighthouse",
+ "phase": "wrap",
+ "pcs": {
+  "lu": {
+   "id": "lu",
+   "name": "陆衡",
+   "role": "退役船医",
+   "seat": "human",
+   "attrs": {
+    "str": 55,
+    "con": 60,
+    "dex": 50,
+    "int": 65,
+    "wil": 60,
+    "cha": 45
+   },
+   "skills": {
+    "spot": 50,
+    "listen": 35,
+    "research": 20,
+    "talk": 15,
+    "intimidate": 15,
+    "insight": 40,
+    "stealth": 20,
+    "lockwork": 5,
+    "medicine": 65,
+    "lore": 5,
+    "occult": 5,
+    "seacraft": 45,
+    "brawl": 40,
+    "firearm": 20,
+    "dodge": 30,
+    "climb": 20
+   },
+   "hp": 15,
+   "hpMax": 15,
+   "mind": 56,
+   "mindMax": 62,
+   "mindDayStart": 62,
+   "mindDayLost": 6,
+   "items": [
+    "急救包",
+    "怀表",
+    "沈砚秋的信",
+    "陈年鲸油"
+   ],
+   "conditions": [],
+   "ticked": [
+    "brawl"
+   ],
+   "status": "ok",
+   "background": "在远洋货轮上做过八年船医。沈砚秋是他同舱三年的测量员，欠他一条命。",
+   "drive": "欠的命要还。活要见人。",
+   "fear": "溺水者的手",
+   "relations": "与苏幼宁是经沈砚秋认识的，彼此客气；觉得温知夏太年轻。"
+  },
+  "su": {
+   "id": "su",
+   "name": "苏幼宁",
+   "role": "省立档案馆抄录员",
+   "seat": "human",
+   "attrs": {
+    "str": 35,
+    "con": 45,
+    "dex": 55,
+    "int": 75,
+    "wil": 55,
+    "cha": 55
+   },
+   "skills": {
+    "spot": 45,
+    "listen": 20,
+    "research": 70,
+    "talk": 45,
+    "intimidate": 15,
+    "insight": 10,
+    "stealth": 40,
+    "lockwork": 25,
+    "medicine": 30,
+    "lore": 50,
+    "occult": 25,
+    "seacraft": 5,
+    "brawl": 25,
+    "firearm": 20,
+    "dodge": 20,
+    "climb": 20
+   },
+   "hp": 10,
+   "hpMax": 10,
+   "mind": 61,
+   "mindMax": 62,
+   "mindDayStart": 62,
+   "mindDayLost": 1,
+   "items": [
+    "放大镜",
+    "铅笔与抄录本",
+    "沈砚秋的信",
+    "灯塔钥匙",
+    "207号房钥匙"
+   ],
+   "conditions": [],
+   "ticked": [
+    "spot",
+    "talk",
+    "research"
+   ],
+   "status": "ok",
+   "background": "沈砚秋的表妹，替他抄过三年潮汐档案。她认得他的每一种笔迹。",
+   "drive": "弄明白。哪怕明白了更糟。",
+   "fear": "认得的字迹写出不认得的话",
+   "relations": "信任陆衡的稳当；常拿温知夏当弟妹照看。"
+  },
+  "wen": {
+   "id": "wen",
+   "name": "温知夏",
+   "role": "小报记者（胆小）",
+   "seat": "ai",
+   "attrs": {
+    "str": 40,
+    "con": 45,
+    "dex": 60,
+    "int": 60,
+    "wil": 40,
+    "cha": 60
+   },
+   "skills": {
+    "spot": 40,
+    "listen": 50,
+    "research": 20,
+    "talk": 55,
+    "intimidate": 15,
+    "insight": 35,
+    "stealth": 45,
+    "lockwork": 5,
+    "medicine": 30,
+    "lore": 5,
+    "occult": 5,
+    "seacraft": 5,
+    "brawl": 25,
+    "firearm": 20,
+    "dodge": 35,
+    "climb": 20
+   },
+   "hp": 11,
+   "hpMax": 11,
+   "mind": 46,
+   "mindMax": 47,
+   "mindDayStart": 47,
+   "mindDayLost": 1,
+   "items": [
+    "采访本",
+    "镁光灯相机",
+    "沈砚秋的信"
+   ],
+   "conditions": [],
+   "ticked": [],
+   "status": "ok",
+   "background": "《沪滨晚报》跑社会新闻的记者。沈砚秋是她大学时的学长，这封信是她收到过的唯一一封不为公事的信。",
+   "drive": "想写一篇不是别人口述的稿子。",
+   "fear": "黑水、叫她全名的声音",
+   "relations": "依赖苏幼宁；有点怕陆衡。"
+  }
+ },
+ "npcs": {
+  "qiu": {
+   "at": "dock",
+   "attitude": -3,
+   "mood": "戒备",
+   "met": true,
+   "said": [
+    "qiu_k1",
+    "qiu_k2"
+   ],
+   "memory": [
+    "17:04 温知夏看过栈桥尽头",
+    "17:22 陆衡同你说过话",
+    "17:29 苏幼宁同你说过话",
+    "17:36 苏幼宁同你说过话",
+    "17:47 陆衡同你说过话",
+    "17:47 温知夏看过渔船",
+    "17:54 陆衡同你说过话",
+    "18:01 陆衡同你说过话"
+   ],
+   "smalltalk_i": 0,
+   "deflect_i": 2
+  },
+  "ge": {
+   "at": "dock",
+   "attitude": 1,
+   "mood": "醉",
+   "met": true,
+   "said": [
+    "ge_k1",
+    "ge_k2"
+   ],
+   "memory": [
+    "17:04 温知夏看过栈桥尽头",
+    "17:22 陆衡同你说过话",
+    "17:29 苏幼宁同你说过话",
+    "17:36 苏幼宁同你说过话",
+    "17:47 陆衡同你说过话",
+    "17:47 温知夏看过渔船",
+    "17:54 陆衡同你说过话",
+    "18:01 陆衡同你说过话"
+   ],
+   "smalltalk_i": 0,
+   "deflect_i": 1
+  },
+  "yun": {
+   "at": "inn",
+   "attitude": 3,
+   "mood": "热络",
+   "met": true,
+   "said": [
+    "yun_k1",
+    "yun_k2",
+    "yun_k3"
+   ],
+   "memory": [
+    "18:54 苏幼宁同你说过话",
+    "19:01 苏幼宁同你说过话",
+    "19:01 陆衡看过207号房",
+    "19:15 苏幼宁看过旧报纸",
+    "19:29 温知夏看过邮筒",
+    "19:36 陆衡同你说过话",
+    "19:43 苏幼宁同你说过话",
+    "19:54 苏幼宁同你说过话"
+   ],
+   "smalltalk_i": 0,
+   "deflect_i": 1
+  },
+  "wei": {
+   "at": "lighthouse",
+   "attitude": 0,
+   "mood": "沉",
+   "met": true,
+   "said": [
+    "wei_k1",
+    "wei_k2",
+    "wei_k3"
+   ],
+   "memory": [
+    "22:26 苏幼宁动过记录簿",
+    "22:47 陆衡同你说过话",
+    "22:54 陆衡同你说过话",
+    "22:54 陆衡看过油柜",
+    "23:01 苏幼宁看过铁门",
+    "23:16 陆衡看过潮钟",
+    "23:44 陆衡看过塔灯",
+    "23:55 陆衡看过钟舌"
+   ],
+   "smalltalk_i": 0,
+   "deflect_i": 0
+  },
+  "man": {
+   "at": "inn",
+   "attitude": 1,
+   "mood": "好奇",
+   "met": true,
+   "said": [
+    "man_k1",
+    "man_k2"
+   ],
+   "memory": [
+    "18:54 苏幼宁同你说过话",
+    "19:01 苏幼宁同你说过话",
+    "19:01 陆衡看过207号房",
+    "19:15 苏幼宁看过旧报纸",
+    "19:29 温知夏看过邮筒",
+    "19:36 陆衡同你说过话",
+    "19:43 苏幼宁同你说过话",
+    "19:54 苏幼宁同你说过话"
+   ],
+   "smalltalk_i": 0,
+   "deflect_i": 1
+  }
+ },
+ "clues": {
+  "C1": {
+   "found": true,
+   "round": 1,
+   "carrier": "C1a",
+   "by": "su",
+   "knownBy": [
+    "lu",
+    "su",
+    "wen"
+   ],
+   "carriersUsed": [
+    "C1a"
+   ]
+  },
+  "C2": {
+   "found": true,
+   "round": 7,
+   "carrier": "C2b",
+   "by": "director",
+   "knownBy": [
+    "lu",
+    "su",
+    "wen"
+   ],
+   "carriersUsed": [
+    "C2b"
+   ]
+  },
+  "C3": {
+   "found": true,
+   "round": 16,
+   "carrier": "C3b",
+   "by": "director",
+   "knownBy": [
+    "lu",
+    "su",
+    "wen"
+   ],
+   "carriersUsed": [
+    "C3b"
+   ]
+  },
+  "C4": {
+   "found": true,
+   "round": 23,
+   "carrier": "C4a",
+   "by": "yun",
+   "knownBy": [
+    "lu",
+    "su",
+    "wen"
+   ],
+   "carriersUsed": [
+    "C4a"
+   ]
+  },
+  "C5": {
+   "found": true,
+   "round": 9,
+   "carrier": "C5a",
+   "by": "ge",
+   "knownBy": [
+    "lu",
+    "su",
+    "wen"
+   ],
+   "carriersUsed": [
+    "C5a"
+   ]
+  },
+  "C6": {
+   "found": true,
+   "round": 42,
+   "carrier": "C6b",
+   "by": "wei",
+   "knownBy": [
+    "lu",
+    "su",
+    "wen"
+   ],
+   "carriersUsed": [
+    "C6b"
+   ]
+  },
+  "C7": {
+   "found": true,
+   "round": 47,
+   "carrier": "C7a",
+   "by": "lu",
+   "knownBy": [
+    "lu",
+    "su",
+    "wen"
+   ],
+   "carriersUsed": [
+    "C7a"
+   ]
+  }
+ },
+ "flags": {
+  "saw_footprints": 1,
+  "__press": 18,
+  "dusk": 1,
+  "room_access": 1,
+  "__lead": 33,
+  "saw_mailbox": 1,
+  "lamp_dark": 1,
+  "__floor": "reveal",
+  "__floor_why": "触发器「有人叫你的名字」把相位抬到了这一档",
+  "has_oil": 1,
+  "cellar_open": 1,
+  "saw_bell": 1,
+  "voice_called": 1,
+  "__avail_K_voice": 48,
+  "__avail_K_lamp": 48,
+  "__chose_K_lamp": 50,
+  "lamp_lit": 1,
+  "bell_silenced": 1,
+  "__hint_K_voice": 51
+ },
+ "facts": [
+  {
+   "id": "F1",
+   "text": "潮声牌馆，陆衡：找个角落坐下喝酒",
+   "round": 30,
+   "scene": "casino",
+   "source": "player-improv"
+  },
+  {
+   "id": "F2",
+   "text": "潮声牌馆，陆衡：继续喝",
+   "round": 32,
+   "scene": "casino",
+   "source": "player-improv"
+  },
+  {
+   "id": "F3",
+   "text": "潮声牌馆，陆衡：靠着墙打个盹",
+   "round": 34,
+   "scene": "casino",
+   "source": "player-improv"
+  },
+  {
+   "id": "F4",
+   "text": "灯塔，苏幼宁：对着水面喊：你们要什么？我们可以谈，放过这个镇子，把人还回来",
+   "round": 48,
+   "scene": "lighthouse",
+   "source": "player-improv"
+  },
+  {
+   "id": "F5",
+   "text": "灯塔，苏幼宁：跪下来求水里的东西：我愿意替你们保守秘密，别带走任何人",
+   "round": 49,
+   "scene": "lighthouse",
+   "source": "player-improv"
+  }
+ ],
+ "visited": {
+  "dock": 1,
+  "inn": 1,
+  "casino": 1,
+  "lighthouse": 1
+ },
+ "examined": {
+  "dock.board": "done",
+  "dock.office": "spent",
+  "dock.pierend": "done",
+  "dock.boats": "done",
+  "inn.room207": "done",
+  "inn.papers": "done",
+  "inn.mailbox": "done",
+  "casino.table": "spent",
+  "lighthouse.keeperbook": "failed",
+  "lighthouse.oilcabinet": "done",
+  "lighthouse.cellardoor": "done",
+  "lighthouse.bell": "done",
+  "lighthouse.lamp": "done",
+  "lighthouse.clapper": "done"
+ },
+ "beatsUsed": {
+  "dock": [
+   "潮水在桩子之间换气，一下，一下，间隔比人的呼吸长。",
+   "有只海鸟落在缆桩上，看了你们很久，没有叫。"
+  ],
+  "inn": [
+   "楼上那滴水声停了。停下来以后屋里更响。"
+  ],
+  "casino": [
+   "牌馆里忽然没有人出牌了。所有人都偏着头，像在听外面。",
+   "窗外的雾里远远响了一声，像钟，又像船撞了礁。赌客们把筹码收了起来。",
+   "骨牌磕在桌上的声音很齐，齐得像有人在打拍子。",
+   "墙角的煤油灯芯结了花，没有人去剪。",
+   "有个赌客一直用左手推牌，右手揣在袖子里没有拿出来过。"
+  ],
+  "lighthouse": [
+   "铁门的缝里有风，是湿的，带着一股退潮后礁石缝里的味道。",
+   "灯室的玻璃上凝了一层水，水珠是从里面往外渗的。"
+  ]
+ },
+ "firedTriggers": [
+  "T_dusk",
+  "T_dark",
+  "T_voice"
+ ],
+ "offTrack": 0,
+ "stall": 4,
+ "lastClueRound": 47,
+ "pendingPush": null,
+ "ending": {
+  "id": "E_silence",
+  "round": 51
+ },
+ "safety": {
+  "fadeUntil": 0,
+  "level": "full"
+ },
+ "speech": {
+  "human": 54,
+  "ai": 26
+ },
+ "rng": {
+  "seed": 1404789402,
+  "state": 2916649230,
+  "draws": 36
+ },
+ "flavor": {
+  "seed": 2277741551,
+  "state": 1070435108,
+  "draws": 65
+ }
+}
